@@ -1,62 +1,52 @@
 [
   {
   	"id": 1,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-1.jpg",
   	"clicked": false
   },
   {
   	"id": 2,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-2.jpg",
   	"clicked": false
   },
   {
   	"id": 3,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-3.jpg",
   	"clicked": false
   },
   {
   	"id": 4,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-4.jpg",
   	"clicked": false
   },
   {
   	"id": 5,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-5.png",
   	"clicked": false
   },
   {
   	"id": 6,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-6.jpg",
   	"clicked": false
   },
   {
   	"id": 7,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-7.jpg",
   	"clicked": false
   },
   {
   	"id": 8,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-8.jpg",
   	"clicked": false
   },
   {
   	"id": 9,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-9.jpg",
   	"clicked": false
   },
   {
   	"id": 10,
-  	"name": "",
-  	"image": "",
+  	"photo": "./assets/photos/goat-10.jpg",
   	"clicked": false
-  },
+  }
 ]
