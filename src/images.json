@@ -48,5 +48,15 @@
   	"id": 10,
   	"photo": "./assets/photos/goat-10.jpg",
   	"clicked": false
+  },
+  {
+  	"id": 11,
+  	"photo": "./assets/photos/goat-10.jpg",
+  	"clicked": false
+  },
+  {
+  	"id": 12,
+  	"photo": "./assets/photos/goat-10.jpg",
+  	"clicked": false
   }
 ]
