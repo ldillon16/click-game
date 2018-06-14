@@ -2,18 +2,18 @@
 /*  background: #95d868;*/
   background: #79b253;
   color: #ecf7e6;
-    text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000000;
   display: flex;
   flex-flow: row wrap;
   border-bottom-style: solid;
   border-bottom-color: black;
-  border-bottom-width: 2px;
-  border-color: black;
+  border-bottom-width: 3px;
+  border-color: #466d31;
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
   width: 100%;
-  font-size: 110%;
+  font-size: 130%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

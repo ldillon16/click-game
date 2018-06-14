@@ -4,7 +4,7 @@ import "./ClickCard.css";
 const ClickCard = props => (
   <div className="card">
     <div onClick={() => props.cardClicked(props.id)} className="card card-clicked img-container">
-      <div className="img-container">
+      <div className="img-container zoom">
         <img alt={props.name} src={props.image} />
       </div>
     </div>

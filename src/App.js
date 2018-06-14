@@ -139,7 +139,7 @@ cardClicked = id => {
 
       </StickyHeader>
 
-    
+      <div className="cardContainer">
 
         {this.state.images.map(images => (
           <ClickCard
@@ -149,6 +149,8 @@ cardClicked = id => {
             image={images.photo}
           />
         ))}
+
+      </div>
       </Wrapper>
       // </Shake>
     );
