@@ -40,11 +40,11 @@ cardClicked = id => {
       console.log("Score: " + score);
       console.log("Top Score: " + topScore);
 
-      alert("Sorry, you lose!")
+      alert("Sorry, you lose! You already clicked that goat :(")
 
 
       score = 0;
-      clickMessage = "You already clicked that goat :(";
+      clickMessage = "Click a goat to begin!";
 
       for (let i=0; i<images.length; i++) {
         images[i].clicked = false;
