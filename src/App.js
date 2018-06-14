@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
+import StickyHeader from 'react-sticky-header';
+
+// import { StickyContainer, Sticky } from 'react-sticky';
 // simport logo from './logo.svg';
 
 import ClickCard from "./components/ClickCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title"
+import Header from "./components/Header"
 
 import images from "./images.json";
 import './App.css';
 
-let correctGuesses = 0;
+let score = 0;
 let topScore = 0;
-let clickMessage = "click on the goats but never the same one twice!"
+let clickMessage = "Click a goat to begin!"
 
 class App extends Component {
 
   state = {
     images,
-    correctGuesses,
+    score,
     topScore,
     clickMessage
   };
@@ -33,47 +37,50 @@ cardClicked = id => {
     const clickedImage = images.filter(image => image.id === id);
 
     if (clickedImage[0].clicked === true) {
-      console.log("Correct Guesses: " + correctGuesses);
+      console.log("Score: " + score);
       console.log("Top Score: " + topScore);
 
-      correctGuesses = 0;
-      clickMessage = "you already clicked that one :(";
+      // alert("Sorry, you lose!")
+
+
+      score = 0;
+      clickMessage = "You already clicked that goat :(";
 
       for (let i=0; i<images.length; i++) {
         images[i].clicked = false;
       }
 
       this.setState({clickMessage});
-      this.setState({correctGuesses});
+      this.setState({score});
       this.setState({images});
 
     // else if for if image wasn't previously clicked and all images have not been clicked yet
-    } else if (correctGuesses < 10) {
+    } else if (score < 12) {
 
 
       clickedImage[0].clicked = true;
 
-      correctGuesses++;
+      score++;
 
-      clickMessage = "keep on clicking the goats!"
+      clickMessage = "Keep on clicking the goats!"
 
-      if (correctGuesses > topScore) {
-        topScore = correctGuesses;
+      if (score > topScore) {
+        topScore = score;
         this.setState({topScore});
       }
 
       images.sort(function(a, b){return 0.5 - Math.random()});
 
       this.setState({images});
-      this.setState({correctGuesses});
+      this.setState({score});
       this.setState({clickMessage});
 
     } else {
       clickedImage[0].clicked =true;
 
-      clickMessage = "You got lucky! Try it again"
+      clickMessage = "You got lucky! Try it again!"
 
-      topScore = 10;
+      topScore = 12;
       this.setState({topScore});
 
       for (let i=0; i<images.length; i++) {
@@ -82,7 +89,7 @@ cardClicked = id => {
 
       images.sort(function(a, b){return 0.5 - Math.random()});
 
-      this.setState({correctGuesses});
+      this.setState({score});
       this.setState({clickMessage});
       this.setState({images});
 
@@ -94,20 +101,45 @@ cardClicked = id => {
 
   render() {
     return (
+    //   <Shake id="linear-yaxis-container" ref="linearyaxis" {...linearaxisProfile}>
+    // <div id="shake-cardtarget-linearyaxis-container" className="shake-cardtarget"></div>
+
       <Wrapper>
-        <Title>Goats</Title>
 
-        <h2 className="stats">
-          {this.state.clickMessage}
-        </h2>
+      const MyHeader = () => (
+      <StickyHeader
+        header={ 
+        <Header>
 
-        <h3 className="stats">
-          Correct Guesses: {this.state.correctGuesses}
-        </h3>
+          <h3>Clicky Goats</h3>
 
-        <h3 className="stats">
-          Top Score: {this.state.topScore}
-        </h3>
+
+          <h3 className="stats">
+            {this.state.clickMessage}
+          </h3>
+
+          <span className="float-right nowrap">
+
+          <h3 className="stats">
+            Score: {this.state.score} |  Top Score: {this.state.topScore}
+
+          </h3>
+          </span>
+
+        </Header>
+        }
+      >
+
+        <Title>
+        <h1>CLICKY GOATS</h1>
+        <h4>Click the goats to earn points, but never the same goat twice!</h4>
+
+        </Title>
+
+
+      </StickyHeader>
+
+    
 
         {this.state.images.map(images => (
           <ClickCard
@@ -118,6 +150,7 @@ cardClicked = id => {
           />
         ))}
       </Wrapper>
+      // </Shake>
     );
   }
 }
