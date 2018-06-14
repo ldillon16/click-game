@@ -1,12 +1,9 @@
-.card {
-
-  border-radius: 3px;
-  height: 200px;
+ 
+.card > .img-container {
   margin: 10px;
-  position: relative;
-  width: 200px;
+  height: 180px;
+  width: 180px;
 }
-
 
 
 .card > .img-container > img {
