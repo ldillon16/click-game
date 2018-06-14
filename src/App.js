@@ -40,7 +40,7 @@ cardClicked = id => {
       console.log("Score: " + score);
       console.log("Top Score: " + topScore);
 
-      // alert("Sorry, you lose!")
+      alert("Sorry, you lose!")
 
 
       score = 0;
